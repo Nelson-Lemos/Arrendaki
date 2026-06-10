@@ -1,0 +1,27 @@
+# Ambiente e segredos
+.env
+.env.*
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build do frontend
+frontend/dist/
+frontend/.vite/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
