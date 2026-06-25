@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface ContactModalProps {
   type: 'direct' | 'broker' | 'video' | 'notifications' | 'addProperty'
   propertyTitle?: string
@@ -14,7 +16,7 @@ export function ContactModal({ type, propertyTitle, propertyPrice, onClose, onSe
     { icon: 'trending', msg: 'Redução de preço: T3 em Miramar agora a 250 000 Kz', time: 'Ontem' },
   ]
 
-  const notifIcons: Record<string, JSX.Element> = {
+  const notifIcons: Record<string, React.ReactElement> = {
     home: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
     message: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
     star: <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,

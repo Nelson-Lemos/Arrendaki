@@ -2,12 +2,11 @@ import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useProperties } from '../hooks/useProperties'
 import { useToast } from '../hooks/useToast'
-import { useAuth } from '../context/AuthContext'
 import { SearchHero } from '../components/SearchHero'
 import { PropertyCard } from '../components/PropertyCard'
 import { ToastContainer } from '../components/Toast'
 import { ContactModal } from '../components/ContactModal'
-import type { Property, Broker } from '../types'
+import type { Broker } from '../types'
 import '../styles/pages/browse.css'
 
 interface BrowseProps {
@@ -19,11 +18,10 @@ interface BrowseProps {
   onHireBroker: (broker: Broker) => void
 }
 
-export function Browse({ favorites, onToggleFav, contactModalType, onContactModalClose, onContactSend, onHireBroker }: BrowseProps) {
+export function Browse({ favorites, onToggleFav, contactModalType, onContactModalClose, onContactSend }: BrowseProps) {
   const navigate = useNavigate()
   const { properties, fetchProperties } = useProperties()
-  const { toasts, showToast } = useToast()
-  const { isAuthenticated } = useAuth()
+  const { toasts } = useToast()
 
   const handleFilter = useCallback((filters: Record<string, string>) => {
     const apiFilters: any = {}

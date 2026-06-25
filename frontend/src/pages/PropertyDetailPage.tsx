@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useProperties } from '../hooks/useProperties'
 import { ContactModal } from '../components/ContactModal'
@@ -43,8 +43,9 @@ export function PropertyDetailPage() {
 
   const p = property
 
-  const amenityList: [string, string][] = [
-    ['piscina', 'Piscina', 'pool'], ['garagem', 'Garagem', 'car'],
+  const amenityList: [string, string, string][] = [
+    ['piscina', 'Piscina', 'pool'],
+    ['garagem', 'Garagem', 'car'],
     ['condominio', 'Condomínio Fechado', 'shield'],
     ['mobilado', 'Mobilado', 'sofa'],
     ['jardim', 'Jardim', 'tree'],
@@ -53,8 +54,8 @@ export function PropertyDetailPage() {
     ['cisterna', 'Cisterna', 'droplet'],
   ]
 
-  const renderAmenityIcon = (icon: string) => {
-    const icons: Record<string, JSX.Element> = {
+  const renderAmenityIcon = (icon: string): React.ReactElement | null => {
+    const icons: Record<string, React.ReactElement> = {
       pool: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/></svg>,
       car: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 14h4l2 3h6l2-3h4"/><rect x="2" y="9" width="20" height="5" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>,
       shield: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
