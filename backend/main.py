@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routers import auth, properties, brokers
-from .models import Base
-from .database import engine, SessionLocal
-from .seed import seed_data
+from backend.routers import auth, properties, brokers
+from backend.models import Base
+from backend.database import engine, SessionLocal
+from backend.seed import seed_data
 
 app = FastAPI()
 

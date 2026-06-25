@@ -1,0 +1,125 @@
+.browse-page {
+  animation: pageEnter 0.4s var(--transition) forwards;
+}
+
+.browse-page .how-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.browse-page .how-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.browse-page .steps-flow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+
+.browse-page .step {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.browse-page .step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.browse-page .step h4 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.browse-page .step p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.browse-page .step-arrow {
+  padding-top: 2.5rem;
+  font-size: 1.5rem;
+  color: var(--border);
+  flex-shrink: 0;
+}
+
+.browse-page .modes-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.browse-page .mode-card {
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition);
+}
+
+.browse-page .mode-card:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.browse-page .mode-card.featured {
+  border-color: var(--accent);
+  background: rgba(201, 160, 60, 0.04);
+}
+
+.browse-page .mode-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--border-light);
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.browse-page .featured .mode-badge {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.browse-page .mode-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.browse-page .mode-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.browse-page .mode-card li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browse-page .mode-fee {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.75rem;
+}
+
+.browse-page .mode-fee strong {
+  color: var(--primary);
+}

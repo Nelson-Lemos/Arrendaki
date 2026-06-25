@@ -27,6 +27,7 @@ export interface Property {
   desc: string
   amenities: Amenities
   color: string
+  image_url: string
   images: string[]
   owner_id?: number
   created_at?: string

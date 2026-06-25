@@ -64,6 +64,7 @@ class PropertyOut(BaseModel):
     desc: Optional[str] = None
     amenities: Optional[Amenities] = None
     color: str
+    image_url: Optional[str] = None
     images: Optional[list[str]] = None
     owner_id: Optional[int] = None
     created_at: Optional[datetime] = None
@@ -88,6 +89,7 @@ class PropertyCreate(BaseModel):
     desc: Optional[str] = None
     amenities: Optional[Amenities] = None
     color: str = "#c8a97e"
+    image_url: Optional[str] = None
     images: Optional[list[str]] = None
 
 

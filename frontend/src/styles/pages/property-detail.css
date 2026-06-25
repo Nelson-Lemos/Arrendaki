@@ -1,0 +1,232 @@
+.property-detail-page {
+  animation: pageEnter 0.4s var(--transition) forwards;
+}
+
+.property-detail-page .detail-gallery {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.property-detail-page .detail-gallery-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.property-detail-page .detail-gallery:hover .detail-gallery-bg {
+  transform: scale(1.02);
+}
+
+.property-detail-page .gallery-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.property-detail-page .gn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.property-detail-page .gn-dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+.property-detail-page .gn-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.property-detail-page .detail-video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.property-detail-page .detail-video-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.property-detail-page .detail-video-btn:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.property-detail-page .detail-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}
+
+.property-detail-page .detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.property-detail-page .detail-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.property-detail-page .detail-price {
+  text-align: right;
+}
+
+.property-detail-page .detail-price-val {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.property-detail-page .detail-price-period {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.property-detail-page .detail-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.property-detail-page .detail-tag {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.property-detail-page .detail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.property-detail-page .info-item {
+  text-align: center;
+}
+
+.property-detail-page .info-item .info-val {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.property-detail-page .info-item .info-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.property-detail-page .detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.property-detail-page .detail-section h4 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.property-detail-page .detail-section p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.property-detail-page .detail-amenities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.property-detail-page .amenity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.property-detail-page .amenity.yes::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 700;
+}
+
+.property-detail-page .amenity.no::before {
+  content: '✗';
+  color: var(--text-muted);
+}
+
+.property-detail-page .detail-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: 1.5rem;
+}
+
+.property-detail-page .detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.property-detail-page .detail-back:hover {
+  color: var(--primary);
+}
+
+.property-detail-page .detail-back svg {
+  transition: transform 0.2s ease;
+}
+
+.property-detail-page .detail-back:hover svg {
+  transform: translateX(-3px);
+}

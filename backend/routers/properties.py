@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from typing import Optional
-from ..schemas import PropertyOut
-from ..models import Property
-from ..database import get_db
+from backend.schemas import PropertyOut
+from backend.models import Property
+from backend.database import get_db
 
 router = APIRouter(prefix="/properties", tags=["properties"])
 

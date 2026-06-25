@@ -39,6 +39,7 @@ class Property(Base):
     desc = Column(Text, nullable=True)
     amenities = Column(JSON, nullable=True)
     color = Column(String(7), default="#c8a97e")
+    image_url = Column(String(500), nullable=True)
     images = Column(JSON, nullable=True)
     owner_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from ..schemas import BrokerOut
-from ..models import Broker
-from ..database import get_db
+from backend.schemas import BrokerOut
+from backend.models import Broker
+from backend.database import get_db
 
 router = APIRouter(prefix="/brokers", tags=["brokers"])
 

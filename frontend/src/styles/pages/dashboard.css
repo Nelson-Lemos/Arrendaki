@@ -1,0 +1,201 @@
+.dashboard-page {
+  min-height: calc(100vh - 60px);
+  background: var(--bg);
+  animation: pageEnter 0.4s var(--transition) forwards;
+}
+
+.dashboard-page .dash-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-page .dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-page .dash-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+}
+
+.dashboard-page .add-property-btn {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.dashboard-page .add-property-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.dashboard-page .add-property-btn:active {
+  transform: translateY(0);
+}
+
+.dashboard-page .kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-page .kpi-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.dashboard-page .kpi-card:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.dashboard-page .kpi-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.dashboard-page .kpi-val {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.dashboard-page .kpi-trend {
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.dashboard-page .kpi-trend.up { color: var(--green); }
+.dashboard-page .kpi-trend.down { color: var(--red); }
+
+.dashboard-page .dash-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-page .dash-tab {
+  padding: 8px 18px;
+  border: none;
+  background: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.dashboard-page .dash-tab:hover {
+  color: var(--text-primary);
+}
+
+.dashboard-page .dash-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.dashboard-page .dash-property-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  background: var(--surface);
+  transition: var(--transition);
+}
+
+.dashboard-page .dash-property-item:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-page .dash-property-img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dashboard-page .dash-property-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard-page .dash-property-info {
+  flex: 1;
+}
+
+.dashboard-page .dash-property-info .dpi-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.dashboard-page .dash-property-info .dpi-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dashboard-page .dash-property-price {
+  text-align: right;
+}
+
+.dashboard-page .dash-property-price .dpp-val {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.dashboard-page .dash-property-status {
+  font-size: 0.78rem;
+  background: var(--green-light);
+  color: var(--green);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.dashboard-page .dash-edit-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.dashboard-page .dash-edit-btn:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+}

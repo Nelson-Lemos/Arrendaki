@@ -17,10 +17,10 @@ export function SearchHero({ onFilter }: SearchHeroProps) {
 
   const quickFilters = [
     { key: 'all', label: 'Todos' },
-    { key: 'featured', label: '⭐ Destaque' },
-    { key: 'video', label: '🎬 Com Vídeo' },
-    { key: 'new', label: '🆕 Novo' },
-    { key: 'negotiable', label: '💬 Preço Negociável' },
+    { key: 'featured', label: 'Destaque' },
+    { key: 'video', label: 'Com Vídeo' },
+    { key: 'new', label: 'Novo' },
+    { key: 'negotiable', label: 'Preço Negociável' },
   ]
 
   return (
@@ -57,7 +57,7 @@ export function SearchHero({ onFilter }: SearchHeroProps) {
         </select>
         <select value={filterMode} onChange={e => setFilterMode(e.target.value)}>
           <option value="">Com/sem intermediário</option>
-          <option value="direct">Direto (sem intermediário)</option>
+          <option value="direct">Directo (sem intermediário)</option>
           <option value="brokered">Com intermediário</option>
         </select>
         <button className="btn-search" onClick={handleFilter}>
