@@ -16,8 +16,8 @@
 
 .logo-text {
   font-size: 1.5rem;
-  color: var(--primary);
-  font-weight: 300;
+  color: var(--text-primary);
+  font-weight: 600;
   letter-spacing: -0.5px;
 }
 
@@ -26,240 +26,11 @@
   color: var(--accent);
 }
 
-/* ─── BUTTONS ──────────────────────────────────────────────── */
-.btn-primary {
-  background: var(--accent);
-  color: var(--primary);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 14px 28px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px var(--accent-glow);
-}
-
-.btn-primary:active {
-  transform: translateY(0) scale(0.98);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--white, #fff);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--radius-md);
-  padding: 13px 24px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-outline:hover {
-  border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.btn-outline:active {
-  transform: scale(0.98);
-}
-
-.btn-ghost {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.55);
-  border: none;
-  padding: 13px 16px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-ghost:hover {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.btn-search {
-  background: var(--accent);
-  color: var(--primary);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 10px 20px;
-  font-weight: 600;
-  font-size: 0.88rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  white-space: nowrap;
-  transition: var(--transition);
-}
-
-.btn-search:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-}
-
-.btn-search:active {
-  transform: translateY(0);
-}
-
-.btn-submit {
-  width: 100%;
-  background: var(--primary);
-  color: var(--accent);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 13px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  margin-top: 0.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-submit:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-submit:active {
-  transform: translateY(0);
-}
-
-.btn-hire {
-  width: 100%;
-  background: var(--primary);
-  color: var(--accent);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 10px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-hire:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-}
-
-.btn-hire:active {
-  transform: translateY(0);
-}
-
-.btn-contact-direct,
-.btn-contact-broker {
-  padding: 14px;
-  border-radius: var(--radius-md);
-  font-size: 0.92rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  border: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-contact-direct {
-  background: var(--primary);
-  color: var(--accent);
-}
-
-.btn-contact-direct:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-}
-
-.btn-contact-broker {
-  background: var(--accent);
-  color: var(--primary);
-}
-
-.btn-contact-broker:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-}
-
-/* ─── FORM ELEMENTS ───────────────────────────────────────── */
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-bottom: 6px;
-}
-
-.form-control {
-  width: 100%;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 0.9rem;
-  color: var(--text-primary);
-  outline: none;
-  transition: var(--transition);
-  background: var(--surface);
-}
-
-.form-control:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(15, 23, 36, 0.08);
-}
-
-.form-control::placeholder {
-  color: var(--text-muted);
-}
-
-textarea.form-control {
-  resize: vertical;
-  min-height: 90px;
-}
-
-.form-error {
-  font-size: 0.78rem;
-  color: var(--red);
-  margin-top: 4px;
-  animation: fadeUp 0.2s ease forwards;
-}
-
-.form-control.error {
-  border-color: var(--red);
-}
-
-.form-control.success {
-  border-color: var(--green);
-}
-
 /* ─── PROPERTY CARD ───────────────────────────────────────── */
 .properties-grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.25rem;
   padding: 1.5rem;
   align-content: start;
@@ -267,7 +38,7 @@ textarea.form-control {
 
 .property-card {
   background: var(--surface);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--border-light);
   transition: var(--transition);
@@ -289,7 +60,7 @@ textarea.form-control {
 
 .property-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   border-color: var(--border);
 }
 
@@ -303,7 +74,7 @@ textarea.form-control {
 }
 
 .card-img {
-  height: 200px;
+  height: 210px;
   position: relative;
   overflow: hidden;
   background: var(--bg-warm);
@@ -345,30 +116,29 @@ textarea.form-control {
 
 .card-badges {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   display: flex;
   gap: 6px;
   z-index: 2;
 }
 
 .badge {
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.72rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
 .badge-new {
-  background: var(--green);
+  background: var(--success);
   color: white;
 }
 
 .badge-featured {
   background: var(--accent);
-  color: var(--primary);
-  animation: badgePulse 2s infinite;
+  color: white;
 }
 
 .badge-video {
@@ -380,24 +150,24 @@ textarea.form-control {
 }
 
 .badge-direct {
-  background: var(--blue);
+  background: var(--primary);
   color: white;
 }
 
 .badge-brokered {
-  background: var(--primary);
-  color: var(--accent);
+  background: var(--text-primary);
+  color: white;
 }
 
 .card-fav {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   background: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,10 +175,13 @@ textarea.form-control {
   font-size: 1rem;
   transition: var(--transition);
   z-index: 2;
+  box-shadow: var(--shadow-xs);
 }
 
 .card-fav:hover {
   transform: scale(1.15);
+  background: white;
+  box-shadow: var(--shadow-sm);
 }
 
 .card-fav:active {
@@ -416,7 +189,7 @@ textarea.form-control {
 }
 
 .card-fav.faved {
-  background: #ffeef0;
+  background: var(--error-light);
 }
 
 .card-fav.faved svg {
@@ -448,7 +221,7 @@ textarea.form-control {
 }
 
 .card-price {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 8px;
@@ -478,8 +251,8 @@ textarea.form-control {
 
 /* ─── HERO SEARCH ─────────────────────────────────────────── */
 .hero-search {
-  background: var(--primary);
-  padding: 2.5rem 2rem 1.75rem;
+  background: var(--text-primary);
+  padding: 3rem 2rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -490,16 +263,16 @@ textarea.form-control {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201, 160, 60, 0.08) 0%, transparent 60%),
-    repeating-linear-gradient(45deg, rgba(201, 160, 60, 0.02) 0px, rgba(201, 160, 60, 0.02) 1px, transparent 1px, transparent 40px);
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, rgba(37, 99, 235, 0.02) 0px, rgba(37, 99, 235, 0.02) 1px, transparent 1px, transparent 40px);
   pointer-events: none;
 }
 
 .hero-search h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
+  font-family: var(--font-sans);
+  font-size: 2rem;
   color: var(--surface);
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1.25rem;
   position: relative;
   z-index: 1;
@@ -512,7 +285,7 @@ textarea.form-control {
   margin: 0 auto 1rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 8px;
   position: relative;
   z-index: 1;
@@ -521,8 +294,8 @@ textarea.form-control {
 
 .search-bar:focus-within {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(201, 160, 60, 0.4);
-  box-shadow: 0 0 0 4px rgba(201, 160, 60, 0.1);
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 .search-field {
@@ -563,7 +336,7 @@ textarea.form-control {
 }
 
 .search-bar select option {
-  background: var(--primary);
+  background: var(--text-primary);
   color: white;
 }
 
@@ -580,9 +353,9 @@ textarea.form-control {
 .qf {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border-radius: 999px;
   color: rgba(255, 255, 255, 0.6);
-  padding: 5px 14px;
+  padding: 6px 16px;
   font-size: 0.82rem;
   cursor: pointer;
   transition: var(--transition);
@@ -596,9 +369,9 @@ textarea.form-control {
 }
 
 .qf.active {
-  background: var(--accent);
-  color: var(--primary);
-  border-color: var(--accent);
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
   font-weight: 600;
 }
 
@@ -613,7 +386,7 @@ textarea.form-control {
 }
 
 .brokers-header h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -634,7 +407,7 @@ textarea.form-control {
 .broker-card {
   background: var(--surface);
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 1.5rem;
   transition: var(--transition);
   animation: cardEnter 0.5s var(--transition) forwards;
@@ -649,7 +422,7 @@ textarea.form-control {
 .broker-card:nth-child(n+6) { animation-delay: 0.3s; }
 
 .broker-card:hover {
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border-color: var(--border);
   transform: translateY(-2px);
 }
@@ -659,7 +432,7 @@ textarea.form-control {
   height: 56px;
   border-radius: 50%;
   background: var(--primary);
-  color: var(--accent);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -706,9 +479,9 @@ textarea.form-control {
 }
 
 .broker-badge {
-  background: var(--green-light);
-  color: var(--green);
-  border-radius: 20px;
+  background: var(--success-light);
+  color: var(--success);
+  border-radius: 999px;
   padding: 3px 10px;
   font-size: 0.72rem;
   font-weight: 700;
@@ -729,7 +502,7 @@ textarea.form-control {
 }
 
 .toast {
-  background: var(--primary);
+  background: var(--text-primary);
   color: white;
   border-radius: var(--radius-md);
   padding: 12px 18px;
@@ -739,16 +512,16 @@ textarea.form-control {
   gap: 10px;
   animation: slideInRight 0.3s var(--transition), fadeOut 0.3s ease 2.7s forwards;
   max-width: 320px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   pointer-events: auto;
 }
 
 .toast.success {
-  background: var(--green);
+  background: var(--success);
 }
 
 .toast.error {
-  background: var(--red);
+  background: var(--error);
 }
 
 /* ─── SKELETON ──────────────────────────────────────────────── */
@@ -766,13 +539,13 @@ textarea.form-control {
 
 .skeleton-card {
   background: var(--surface);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--border-light);
 }
 
 .skeleton-card .skeleton-img {
-  height: 200px;
+  height: 210px;
   background: linear-gradient(
     90deg,
     var(--border-light) 25%,
@@ -809,4 +582,306 @@ textarea.form-control {
 
 .skeleton-card .skeleton-line.medium {
   width: 80%;
+}
+
+/* ─── AUTOCOMPLETE ──────────────────────────── */
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  margin-top: 4px;
+  overflow: hidden;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  gap: 8px;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+  background: var(--primary-light);
+}
+
+.autocomplete-item-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.autocomplete-item-name svg {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.autocomplete-item-type {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ─── BROWSE TOOLBAR ─────────────────────────── */
+.browse-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.browse-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.browse-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.browse-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.browse-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.browse-sort {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--surface);
+  outline: none;
+  cursor: pointer;
+}
+
+.browse-sort:focus {
+  border-color: var(--primary);
+}
+
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.view-toggle-btn {
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.view-toggle-btn:hover {
+  color: var(--text-primary);
+  background: var(--surface-hover);
+}
+
+.view-toggle-btn.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.price-apply {
+  margin-left: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-sm);
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.price-apply:hover {
+  background: var(--primary-hover);
+}
+
+/* ─── LIST VIEW ─────────────────────────────── */
+.properties-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.property-card-list {
+  display: flex;
+  gap: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: var(--transition);
+  animation: cardEnter 0.5s var(--transition) forwards;
+  opacity: 0;
+}
+
+.property-card-list:hover {
+  background: var(--surface-hover);
+}
+
+.property-card-list .pcl-img {
+  width: 240px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.property-card-list .pcl-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-card-list .pcl-img .card-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.property-card-list .pcl-body {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.property-card-list .pcl-body .card-location {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.property-card-list .pcl-body .card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.property-card-list .pcl-body .card-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.property-card-list .pcl-body .card-price small {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.property-card-list .pcl-body .card-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.property-card-list .pcl-fav {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.property-card-list .pcl-fav button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.property-card-list .pcl-fav button:hover {
+  border-color: var(--error);
+}
+
+.property-card-list .pcl-fav button.faved {
+  background: var(--error-light);
+  border-color: var(--error);
+}
+
+/* ─── BROWSER EMPTY ──────────────────────────── */
+.browse-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.browse-empty h3 {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.browse-empty p {
+  font-size: 0.9rem;
+  max-width: 400px;
+}
+
+/* ─── PAGINATION ─────────────────────────────── */
+.browse-pagination {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.browse-pagination-info {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }

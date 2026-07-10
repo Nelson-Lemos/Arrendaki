@@ -1,22 +1,20 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { Avatar } from './ui/Avatar'
+import { Button } from './ui/Button'
 
 export function Navbar() {
   const { user, isAuthenticated } = useAuth()
   const navigate = useNavigate()
 
-  const initials = user?.name
-    ? user.name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase()
-    : '--'
-
   return (
     <nav className="navbar">
       <div className="nav-left">
         <Link to="/" className="logo-mark small">
-          <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-            <rect width="48" height="48" rx="10" fill="#0f1724" />
-            <path d="M10 32L24 14L38 32H10Z" fill="#c9a03c" opacity="0.9" />
-            <rect x="19" y="26" width="10" height="10" rx="2" fill="#0f1724" />
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="12" fill="#2563EB" />
+            <path d="M10 32L24 14L38 32H10Z" fill="#F97316" opacity="0.9" />
+            <rect x="19" y="26" width="10" height="10" rx="3" fill="white" />
           </svg>
           <span className="logo-text">Arrenda<strong>Ki</strong></span>
         </Link>
@@ -36,19 +34,28 @@ export function Navbar() {
         </div>
       </div>
       <div className="nav-right">
-        <Link to="/explorar" className="btn-search" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
-          </svg>
-          Pesquisar
+        <Link to="/explorar">
+          <Button variant="ghost" size="sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+            </svg>
+            Pesquisar
+          </Button>
         </Link>
         {isAuthenticated ? (
-          <div className="user-avatar" onClick={() => navigate('/dashboard')} title="Painel">
-            <span>{initials}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <Button variant="ghost" size="sm" onClick={() => navigate('/mensagens')}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Mensagens
+            </Button>
+            <Button variant="ghost" size="sm" onClick={() => navigate('/dashboard')}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </Button>
+            <Avatar name={user?.name} size="md" onClick={() => navigate('/perfil')} />
           </div>
         ) : (
-          <Link to="/login" className="btn-outline" style={{ color: 'var(--primary)', borderColor: 'var(--border)', fontSize: '0.85rem', padding: '8px 16px' }}>
-            Entrar
+          <Link to="/login">
+            <Button variant="primary" size="sm">Entrar</Button>
           </Link>
         )}
       </div>

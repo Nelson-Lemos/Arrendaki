@@ -128,3 +128,69 @@ class ContactCreate(BaseModel):
     phone: Optional[str] = None
     email: Optional[str] = None
     message: Optional[str] = None
+
+
+class ContactOut(BaseModel):
+    id: int
+    property_id: Optional[int] = None
+    broker_id: Optional[int] = None
+    mode: str
+    name: Optional[str] = None
+    phone: Optional[str] = None
+    email: Optional[str] = None
+    message: Optional[str] = None
+    created_at: Optional[datetime] = None
+
+    model_config = {"from_attributes": True}
+
+
+class DashboardStats(BaseModel):
+    active_properties: int = 0
+    total_views: int = 0
+    total_contacts: int = 0
+    estimated_revenue: float = 0
+    contacts_this_week: int = 0
+    properties_change: int = 0
+    views_change: int = 0
+    contacts_change: int = 0
+
+
+# ─── Chat ───────────────────────────────────────────────────
+class ChatMessageCreate(BaseModel):
+    message: str
+
+
+class ChatMessageOut(BaseModel):
+    id: int
+    room_id: int
+    sender_id: int
+    sender_name: str = ""
+    message: str
+    created_at: Optional[datetime] = None
+
+    model_config = {"from_attributes": True}
+
+
+class ChatRoomCreate(BaseModel):
+    property_id: Optional[int] = None
+    participant_id: int
+
+
+class ChatRoomOut(BaseModel):
+    id: int
+    property_id: Optional[int] = None
+    participants: list[dict] = []
+    last_message: Optional[str] = None
+    last_message_at: Optional[datetime] = None
+    unread: int = 0
+    created_at: Optional[datetime] = None
+
+    model_config = {"from_attributes": True}
+
+
+class WSMessage(BaseModel):
+    type: str  # "message" | "typing" | "read"
+    room_id: int
+    sender_id: int
+    sender_name: str = ""
+    message: str = ""

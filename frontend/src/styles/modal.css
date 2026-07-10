@@ -1,7 +1,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 36, 0.55);
+  background: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   animation: fadeIn 0.2s ease forwards;
@@ -27,7 +27,7 @@
   position: relative;
   z-index: 200;
   background: var(--surface);
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
   width: 100%;
   max-width: 820px;
   max-height: 92vh;
@@ -38,7 +38,7 @@
 
 @media (min-width: 640px) {
   .modal-panel {
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-2xl);
   }
 }
 
@@ -53,11 +53,11 @@
   z-index: 2;
   background: var(--border-light);
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   transition: var(--transition);
   display: flex;
@@ -74,7 +74,6 @@
   transform: scale(0.9);
 }
 
-/* Contact Form */
 .contact-form {
   padding: 1.5rem;
 }
@@ -91,10 +90,9 @@
   margin-bottom: 1.25rem;
 }
 
-/* Video Modal */
 .video-player {
   background: #000;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   aspect-ratio: 16/9;
   display: flex;

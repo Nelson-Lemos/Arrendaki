@@ -1,0 +1,53 @@
+export const neighborhoodCoords: Record<string, [number, number]> = {
+  'Luanda': [-8.8383, 13.2344],
+  'Talatona': [-8.9167, 13.1833],
+  'Benfica': [-8.8833, 13.1667],
+  'Camama': [-8.9500, 13.1500],
+  'Golf 1': [-8.8700, 13.2400],
+  'Golf 2': [-8.8650, 13.2450],
+  'Golf Jardim': [-8.8750, 13.2480],
+  'Kilamba': [-8.9500, 13.2000],
+  'Zango': [-8.9200, 13.3000],
+  'Rocha Pinto': [-8.8500, 13.2100],
+  'Sapú': [-8.8600, 13.2200],
+  'Patriota': [-8.8450, 13.2250],
+  'Viana': [-8.9000, 13.3667],
+  'Alvalade': [-8.8300, 13.2400],
+  'Maianga': [-8.8200, 13.2350],
+  'Ingombota': [-8.8100, 13.2300],
+  'Maculusso': [-8.8250, 13.2380],
+  'Mutamba': [-8.8150, 13.2280],
+  'Coqueiros': [-8.8350, 13.2320],
+  'Prenda': [-8.8400, 13.2250],
+  'Cazenga': [-8.8800, 13.2700],
+  'Cacuaco': [-8.7800, 13.3700],
+  'Rangel': [-8.8500, 13.2500],
+  'Samba': [-8.8600, 13.2100],
+  'Miramar': [-8.8250, 13.2420],
+  'Morro Bento': [-8.8700, 13.1900],
+  'Vila Alice': [-8.8350, 13.2360],
+  'Ilha de Luanda': [-8.7900, 13.2200],
+  'Marginal': [-8.8000, 13.2250],
+  'São Paulo': [-8.8450, 13.2400],
+  'Futungo de Belas': [-8.9000, 13.1700],
+  'Benguela': [-12.5833, 13.4000],
+  'Lobito': [-12.3500, 13.5500],
+  'Catumbela': [-12.4333, 13.5500],
+  'Lubango': [-14.9167, 13.5000],
+  'Huambo': [-12.7667, 15.7333],
+  'Malanje': [-9.5333, 16.3333],
+  'Saurimo': [-9.6500, 20.4000],
+  'Sumbe': [-11.2000, 13.8333],
+  'Moçâmedes': [-15.2000, 12.1500],
+  'Cabinda': [-5.5500, 12.2000],
+  'Soyo': [-6.1333, 12.3667],
+  'N\'Dalatando': [-9.3000, 14.9167],
+  'Dundo': [-7.3833, 20.8333],
+}
+
+export function getCoordsForLocation(location: string, municipio: string): [number, number] {
+  const key = [location, municipio].find(k => neighborhoodCoords[k])
+  if (key) return neighborhoodCoords[key]
+  if (neighborhoodCoords[municipio]) return neighborhoodCoords[municipio]
+  return neighborhoodCoords['Luanda']
+}

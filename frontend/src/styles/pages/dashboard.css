@@ -1,5 +1,5 @@
 .dashboard-page {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 64px);
   background: var(--bg);
   animation: pageEnter 0.4s var(--transition) forwards;
 }
@@ -18,34 +18,9 @@
 }
 
 .dashboard-page .dash-header h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
   font-size: 1.6rem;
   color: var(--text-primary);
-}
-
-.dashboard-page .add-property-btn {
-  background: var(--accent);
-  color: var(--primary);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition);
-}
-
-.dashboard-page .add-property-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px var(--accent-glow);
-}
-
-.dashboard-page .add-property-btn:active {
-  transform: translateY(0);
 }
 
 .dashboard-page .kpi-row {
@@ -57,7 +32,7 @@
 
 .dashboard-page .kpi-card {
   background: var(--surface);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 1.25rem;
   border: 1px solid var(--border-light);
   transition: var(--transition);
@@ -88,8 +63,8 @@
   margin-top: 4px;
 }
 
-.dashboard-page .kpi-trend.up { color: var(--green); }
-.dashboard-page .kpi-trend.down { color: var(--red); }
+.dashboard-page .kpi-trend.up { color: var(--success); }
+.dashboard-page .kpi-trend.down { color: var(--error); }
 
 .dashboard-page .dash-tabs {
   display: flex;
@@ -125,7 +100,7 @@
   align-items: center;
   gap: 14px;
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 12px 16px;
   background: var(--surface);
   transition: var(--transition);
@@ -175,8 +150,8 @@
 
 .dashboard-page .dash-property-status {
   font-size: 0.78rem;
-  background: var(--green-light);
-  color: var(--green);
+  background: var(--success-light);
+  color: var(--success);
   padding: 2px 8px;
   border-radius: 10px;
   font-weight: 600;

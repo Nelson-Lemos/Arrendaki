@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import auth, properties, brokers
+from backend.routers import auth, properties, brokers, chat, assistant, contacts, dashboard
 from backend.models import Base
 from backend.database import engine, SessionLocal
 from backend.seed import seed_data
@@ -18,6 +18,9 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(properties.router)
 app.include_router(brokers.router)
+app.include_router(chat.router)
+app.include_router(assistant.router)
+app.include_router(contacts.router)
 
 
 @app.on_event("startup")

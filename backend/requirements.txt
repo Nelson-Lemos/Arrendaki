@@ -2,8 +2,10 @@ fastapi
 uvicorn[standard]
 sqlalchemy
 psycopg2-binary
+pymysql
 python-jose[cryptography]
 passlib[bcrypt]
 python-dotenv
 python-multipart
 pydantic
+google-generativeai

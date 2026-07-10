@@ -1,8 +1,16 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, JSON, Text, ForeignKey, DateTime
+from sqlalchemy import (
+    Column, Integer, String, Float, Boolean, JSON, Text, ForeignKey, DateTime, Table
+)
 from sqlalchemy.orm import declarative_base, relationship
 from datetime import datetime, timezone
 
 Base = declarative_base()
+
+chat_participants = Table(
+    "chat_participants", Base.metadata,
+    Column("chat_room_id", Integer, ForeignKey("chat_rooms.id"), primary_key=True),
+    Column("user_id", Integer, ForeignKey("users.id"), primary_key=True),
+)
 
 
 class User(Base):
@@ -17,6 +25,7 @@ class User(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     favorites = relationship("Favorite", back_populates="user")
+    chat_rooms = relationship("ChatRoom", secondary=chat_participants, back_populates="participants")
 
 
 class Property(Base):
@@ -85,3 +94,27 @@ class Contact(Base):
     email = Column(String(255), nullable=True)
     message = Column(Text, nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+
+class ChatRoom(Base):
+    __tablename__ = "chat_rooms"
+
+    id = Column(Integer, primary_key=True, index=True)
+    property_id = Column(Integer, ForeignKey("properties.id"), nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    participants = relationship("User", secondary=chat_participants, back_populates="chat_rooms")
+    messages = relationship("ChatMessage", back_populates="room", order_by="ChatMessage.created_at")
+
+
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+
+    id = Column(Integer, primary_key=True, index=True)
+    room_id = Column(Integer, ForeignKey("chat_rooms.id"), nullable=False)
+    sender_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    message = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    room = relationship("ChatRoom", back_populates="messages")
+    sender = relationship("User")
